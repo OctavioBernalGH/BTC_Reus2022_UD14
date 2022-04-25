@@ -1,0 +1,69 @@
+CREATE TABLE UD14_EJERCICIO_18.persona
+(
+	dni VARCHAR (10)PRIMARY KEY UNIQUE NOT NULL , 
+	FK_dni VARCHAR(10) NOT NULL UNIQUE,
+	CONSTRAINT FK_dni FOREIGN KEY (FK_dni) REFERENCES persona(dni) ON DELETE 	CASCADE ON UPDATE CASCADE, 
+	nombre VARCHAR (20)NOT NULL, 
+	apellidos VARCHAR (20)NOT NULL, 
+	teléfono_fijo INT NOT NULL,
+	teléfono_movil INT NOT NULL UNIQUE, 
+	codigo_personal INT NOT NULL UNIQUE AUTO_INCREMENT
+);
+
+CREATE TABLE alquiler 
+(
+	codigo_alquiler INT NOT NULL UNIQUE PRIMARY KEY,
+	año INT NOT NULL,
+	mes INT NOT NULL,
+	valor FLOAT(10,4) NOT NULL,
+	FK_personaalquiler VARCHAR(20) NOT NULL UNIQUE, 
+	CONSTRAINT FK_personaalquiler FOREIGN KEY (FK_personaalquiler) REFERENCES persona(dni) ON 	DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE compra 
+(
+	codigo_compra INT NOT NULL UNIQUE PRIMARY KEY,
+	año INT NOT NULL,
+	fecha DATE NOT NULL,
+	valor FLOAT(10,4) NOT NULL,
+	FK_personacompra VARCHAR(20) NOT NULL UNIQUE,
+	CONSTRAINT FK_personacompra FOREIGN KEY (FK_personacompra) REFERENCES persona(dni) ON 	DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE inmueble 
+(
+	codigo_inmueble INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	direccion VARCHAR(40)NOT NULL,
+	descripcion VARCHAR(100) NOT NULL,
+	metros_inmueble FLOAT(3,2) NOT NULL,
+    FK_alquiler INT NOT NULL UNIQUE,
+    FK_compra INT NOT NULL UNIQUE,
+    CONSTRAINT FK_alquiler FOREIGN KEY (FK_alquiler) REFERENCES alquiler(codigo_alquiler) ON 	DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT FK_compra FOREIGN KEY (FK_compra) REFERENCES compra(codigo_compra) ON 	DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE locales
+(
+	id_local INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	uso_local VARCHAR(30)NOT NULL,
+	tiene_servicio VARCHAR(30) NOT NULL,
+	FK_inmueble INT NOT NULL UNIQUE, 
+	CONSTRAINT FK_inmueble FOREIGN KEY (FK_inmueble) REFERENCES 	inmueble(codigo_inmueble) ON 	DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE pisos (
+	id_pisos INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	FK_inmueblepiso INT NOT NULL UNIQUE,
+	CONSTRAINT FK_inmueblepiso FOREIGN KEY (FK_inmueblepiso) REFERENCES 	inmueble(codigo_inmueble) ON 	DELETE CASCADE ON UPDATE CASCADE
+	);
+
+CREATE TABLE garajes (
+	id_garaje INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	num_garaje INT NOT NULL,
+	planta_garaje INT NOT NULL,
+	FK_inmueblegaraje INT NOT NULL UNIQUE ,
+	FK_pisosgaraje INT NOT NULL UNIQUE,
+	CONSTRAINT FK_inmueblegaraje FOREIGN KEY (FK_inmueblegaraje) REFERENCES 	inmueble(codigo_inmueble) ON 	DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT FK_pisosgaraje FOREIGN KEY (FK_pisosgaraje) REFERENCES pisos(id_pisos) ON 	DELETE CASCADE ON UPDATE CASCADE
+	);
+
