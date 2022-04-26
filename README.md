@@ -27,7 +27,7 @@ Se crean las tablas "DIRECTORES" y "DESPACHOS" , la primera tiene una relación 
 ![UD14_EJERCICIO_7_EER](https://user-images.githubusercontent.com/103035621/165151384-3ade4fc2-f771-4177-8c88-4c6326616a7a.PNG)
 
 ### [Ejercicio_8 UD14 SQL](https://github.com/OctavioBernalGH/BTC_Reus2022_UD14/blob/main/UD14_EJERCICIO_8.sql "Ejercicio_8")
-Se crean las tablas "PIEZAS" , "PROVEEDORES" y "SUMINISTRA" por este mismo orden. La tabla "SUMINISTRA" se relaciona con las otras dos mediante las claves foraneas "CODIGOPIEZA" (ID de la tabla PIEZAS) y "IDPROVEEDOR" (ID de la tabla PROVEEDORES).
+Se crean las tablas "PIEZAS" , "PROVEEDORES" y "SUMINISTRA" por este mismo orden. La tabla "SUMINISTRA" se relaciona con las otras dos mediante las claves foraneas "CODIGOPIEZA" (ID de la tabla PIEZAS) y "IDPROVEEDOR" (ID de la tabla PROVEEDORES).<br>
 ![UD14_EJERCICIO_8_EER](https://user-images.githubusercontent.com/103035621/165151402-4a795965-8cd2-4569-92d2-3ce0703728bc.PNG)
 
 ### [Ejercicio_9 UD14 SQL](https://github.com/OctavioBernalGH/BTC_Reus2022_UD14/blob/main/UD14_EJERCICIO_9.sql "Ejercicio_9")
