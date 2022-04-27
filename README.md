@@ -1,4 +1,10 @@
-# BTC_Reus2022_UD14
+<table>
+ <tr>
+    <td> <img src="https://github.com/OctavioBernalGH/BTC_Reus2022_UD16/blob/main/dou_logo.png" alt="Team DOU"/></td>
+    <td><h1>Ejercicios SQL Unidad UD16</h1></td>
+  
+ </tr>
+</table>
 
 Actividades unidad UD14 realizadas en el grupo 1.<br>
 Grupo formado por:
