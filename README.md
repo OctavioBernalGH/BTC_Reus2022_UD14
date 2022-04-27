@@ -5,7 +5,7 @@
   
  </tr>
 </table>
-
+<hr>
 Actividades unidad UD14 realizadas en el grupo 1.<br>
 Grupo formado por:
 [URI](https://github.com/mednologic "mednologic")
