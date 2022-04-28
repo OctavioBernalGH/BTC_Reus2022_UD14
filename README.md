@@ -1,10 +1,19 @@
-# BTC_Reus2022_UD14
-
+<table>
+ <tr>
+    <td> <img src="https://github.com/OctavioBernalGH/BTC_Reus2022_UD16/blob/main/dou_logo.png" alt="Team DOU"/></td>
+    <td><h1>Ejercicios SQL Unidad UD16</h1></td>
+  
+ </tr>
+</table>
+<hr>
 Actividades unidad UD14 realizadas en el grupo 1.<br>
-Grupo formado por:
-[URI](https://github.com/mednologic "mednologic")
-, [DAVID](https://github.com/DavidDalmauDieguez "DavidDalmauDieguez")
-y [OCTAVIO](https://github.com/OctavioBernalGH "OctavioBernalGH").
+
+Este ejercicio ha sido realizado por los miembros del equipo 1. Dicho equipo esta formado por:
+
+[- Octavio Bernal](https://github.com/OctavioBernalGH)<br>
+[- David Dalmau](https://github.com/DavidDalmauDieguez)<br>
+[- J.Oriol López Bosch](https://github.com/mednologic)
+
 
 ### [Ejercicio_3 UD14 SQL](https://github.com/OctavioBernalGH/BTC_Reus2022_UD14/blob/main/UD14_EJERCICIO_3.sql "Ejercicio_3")
 Se crean las tablas "FABRICANTES" y "ARTICULOS" y se relacionan mediante la clave foranea "FK_FABRICANTE".<BR>
